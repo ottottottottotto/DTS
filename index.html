@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DTS — Component Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-screen" id="loginScreen">
+  <div class="login-box">
+    <div class="brand" style="margin-bottom:18px;">
+      <span class="mark">DTS//</span>
+      <span class="tag">Component Catalog</span>
+    </div>
+    <div class="eyebrow" style="margin-bottom:14px;">ACCOUNT ACCESS — MOCK LOGIN</div>
+    <form id="loginForm">
+      <label class="field-label" for="loginEmail">Email</label>
+      <input class="field-input" id="loginEmail" type="email" placeholder="you@example.com" required>
+      <label class="field-label" for="loginPass">Password</label>
+      <input class="field-input" id="loginPass" type="password" placeholder="••••••••" required>
+      <button type="submit" class="login-btn">LOG IN</button>
+      <button type="button" class="guest-btn" id="guestBtn">CONTINUE AS GUEST</button>
+    </form>
+    <div class="disclaimer" style="margin-top:14px;">Mock login for a class demo — nothing is verified or stored.</div>
+  </div>
+</div>
+
+<div id="storeApp" style="display:none;">
+
+<header class="top">
+  <div class="top-row">
+    <div class="brand">
+      <span class="mark">DTS//</span>
+      <span class="tag">Component Catalog</span>
+    </div>
+    <button class="cart-btn" id="cartBtn">
+      CART <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+  <div class="subline">
+    <span class="live"><span class="dot"></span>MOCK STORE — SCHOOL PROJECT DEMO</span>
+    <span id="skuTotal">6 SKUs listed</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">CATALOG REV. 04 — FALL BUILD</div>
+  <h1 class="disp">Hardware, specified plainly.</h1>
+  <p>Six components, full specs, no upsells. Add to cart to see the checkout flow — nothing here actually ships.</p>
+</section>
+
+<section class="catalog">
+  <div class="catalog-head">
+    <h2>All components</h2>
+    <span class="count" id="resultCount">6 items</span>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<footer>
+  <span>DTS CATALOG — PROTOTYPE</span>
+  <span>NOT A REAL STORE</span>
+</footer>
+
+</div>
+
+<div class="overlay" id="overlay"></div>
+<div class="overlay" id="dtsOverlay"></div>
+<div class="dts-panel" id="dtsPanel">
+  <div class="dts-head">
+    <span class="sku" id="dtsSku">—</span>
+    <button class="close-btn" id="dtsClose">✕</button>
+  </div>
+  <div class="dts-art" id="dtsArt"></div>
+  <div class="dts-body">
+    <h3 class="disp" id="dtsName">—</h3>
+    <p class="dts-desc" id="dtsDesc"></p>
+    <ul class="specs" id="dtsSpecs"></ul>
+    <div class="card-foot">
+      <span class="price" id="dtsPrice"></span>
+      <button class="add-btn" id="dtsAddBtn">ADD TO CART</button>
+    </div>
+  </div>
+</div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h2 class="disp">Cart</h2>
+    <button class="close-btn" id="closeDrawer">✕</button>
+  </div>
+  <div class="drawer-items" id="drawerItems"></div>
+  <div class="drawer-foot">
+    <div class="totals-row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+    <div class="totals-row"><span>Est. tax (7%)</span><span id="tax">$0.00</span></div>
+    <div class="totals-row grand"><span>Total</span><span id="grandTotal">$0.00</span></div>
+    <button class="checkout-btn" id="checkoutBtn" disabled>PLACE MOCK ORDER</button>
+    <div class="disclaimer">Simulated checkout — no payment is processed.</div>
+  </div>
+</div>
+
+<div class="confirm" id="confirm">
+  <div class="confirm-box">
+    <div class="mark">✓</div>
+    <h3 class="disp">Order simulated</h3>
+    <p>This is a mock confirmation for the class demo. No real order was placed.</p>
+    <div class="order-id" id="orderId">ORDER #—</div>
+    <button id="confirmClose">CLOSE</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
